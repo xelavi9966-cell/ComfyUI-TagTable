@@ -57,12 +57,13 @@ The node automatically composes the **Final Prompt** from all enabled rows.
 
 2. Go to
 
-3. Clone the repository: https://github.com/xelavi9966-cell/ComfyUI-TagTable
+3. Clone the repository: https://github.com/xelavi9966-cell/ComfyUI-TagTable.git
 
 Or download and extract the repository into the `custom_nodes` folder.
 
 4. Restart ComfyUI.
 
 ---
+
 
 # File structure
