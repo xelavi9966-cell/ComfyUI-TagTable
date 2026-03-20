@@ -1,69 +1,67 @@
-# ComfyUI Tag Table Node
+# ComfyUI-TagTable
 
-A custom node for ComfyUI that allows building prompts using a table structure.
+A custom node for ComfyUI that lets you build prompts from a structured tag table.
 
-Instead of writing one long prompt string, you can organize tags in rows, enable or disable them, and see the final compiled prompt instantly.
+## Features
 
-This is especially useful for complex prompts, LoRA workflows, and prompt experimentation.
+- Editable table with tag and comment fields
+- Enable/disable toggle for each row
+- Final Prompt preview generated from enabled tags only
+- Copy button for quick prompt copying
+- Drag-and-drop row reordering
+- Delete button for removing rows
+- Auto-resizing text areas
+- Node size persistence after resize
+- Table data persistence between sessions
 
----
+## Node
 
-# Features
+**Tag Table**
 
-• Table-based prompt building  
-• Enable / disable individual rows  
-• Multi-line text support  
-• Comment field for notes (not included in prompt)  
-• Real-time final prompt preview  
-• Clean prompt output without automatic commas  
+### Inputs
+- **rows** - number of rows in the table
+- **table_data** - internal JSON data used to store table state
 
-Only enabled rows are included in the final prompt.
+### Output
+- **tags_text** - final prompt string built from all enabled tag rows
 
----
-
-# Why this node is useful
-
-When working with Stable Diffusion or SDXL, prompts often contain many elements:
-
-- quality tags
-- character description
-- clothing
-- pose
-- environment
-- lighting
-- style modifiers
-
-Instead of constantly editing a long string, this node lets you manage prompts as modular blocks.
-
-You can quickly toggle parts of the prompt on or off and experiment much faster.
-
----
-
-# Node Interface
+## How it works
 
 Each row contains:
+- an enable checkbox
+- a tag field
+- a comment field
 
-Tag – the prompt text  
-Comment – optional note (not included in the final prompt)  
-Toggle – enable or disable the row
+Only enabled rows with non-empty tags are included in the final output string.
 
-The node automatically composes the **Final Prompt** from all enabled rows.
+The **Final Prompt** area shows the combined result in real time.
 
----
+## Installation
 
-# Installation
+Clone this repository into your `ComfyUI/custom_nodes` folder:
 
-1. Open your ComfyUI folder
+```bash
+cd ComfyUI/custom_nodes
+git clone https://github.com/xelavi9966-cell/ComfyUI-TagTable.git
+```
 
-2. Go to
+Then restart ComfyUI.
 
-3. Clone the repository: https://github.com/xelavi9966-cell/ComfyUI-TagTable.git
+## Update
 
-Or download and extract the repository into the `custom_nodes` folder.
+To update the node:
 
-4. Restart ComfyUI.
+```bash
+cd ComfyUI/custom_nodes/ComfyUI-TagTable
+git pull
+```
 
----
+## Notes
 
+- Comments are for organization only and are not included in the output
+- Only enabled rows with filled tag values are used in the final prompt
+- The node is intended for convenient prompt building inside ComfyUI
 
-# File structure
+## License
+
+MIT

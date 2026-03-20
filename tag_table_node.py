@@ -46,5 +46,13 @@ class TagTableNode:
                 parts.append(tag)
 
         result = " ".join(parts)
-
         return (result,)
+
+
+NODE_CLASS_MAPPINGS = {
+    "TagTableNode": TagTableNode
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "TagTableNode": "Tag Table"
+}
