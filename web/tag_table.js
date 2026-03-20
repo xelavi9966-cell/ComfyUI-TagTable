@@ -368,7 +368,7 @@ app.registerExtension({
 
             const finalPromptArea = document.createElement("textarea");
             finalPromptArea.readOnly = true;
-            finalPromptArea.placeholder = "Итоговый промпт будет отображаться здесь";
+            finalPromptArea.placeholder = "Final prompt";
             finalPromptArea.rows = 4;
             finalPromptArea.style.width = "100%";
             finalPromptArea.style.minHeight = "90px";
