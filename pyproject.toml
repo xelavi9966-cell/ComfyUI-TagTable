@@ -1,0 +1,11 @@
+[project]
+name = "comfyui-tagtable"
+description = "A ComfyUI custom node for building, organizing, and previewing tag prompts in a table UI."
+version = "1.5.0"
+license = { text = "MIT" }
+dependencies = []
+
+[tool.comfy]
+publisher = "pat-efd6fb3f-a11f-48e3-8b5b-4c42684e497a"
+display_name = "Tag Table"
+icon = ""

@@ -5,7 +5,7 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "TagTableNode": "Tag Table Node"
+    "TagTableNode": "Tag Table"
 }
 
 WEB_DIRECTORY = "./web"
